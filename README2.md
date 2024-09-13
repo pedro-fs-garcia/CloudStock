@@ -25,29 +25,48 @@
  - Ações Rápidas
     - Criar Produto
     - Editar produto
-    - Criar Usuário
-    - Editar Usuário
+    - Criar Funcionário
+    - Editar Funcionário
 
-### Página de Detalhes do Inventário
- - Distribuição por Categoria
- - Distribuição por produtos
+### Funcionários
+ - Tabela com os funcionarios (nome, funcao, email, permicao)
+
+### Página de Detalhes do estoque
+ - Gráfico de pizza com a distribuição por produtos
  - Ações do inventário:
     - Adicionar Produto
     - Editar Produto
-    - Adicionar Categoria
-    - Editar Categoria
-    - Adicionar Usuários
-    - Editar Usuários
-
-
-
-### Página de discriminação por Categorias
-
-### Página de detalhes da categoria
+    - Adicionar Funcionário
+    - Editar Funcionário
 
 ### Página de Discriminação dos Produtos
+ - Tabela com os Principais produtos
+ - Tabela com todos os produtos
+    - ID do produto
+    - nome
+    - categoria
+    - quantidade em estoque
+    - preço de custo
+    - preço de venda
+    - fornecedor
+    - data de entrada
+    - data de validade
+    - localização no armazém.
+ - Tabela com os produtos em alerta
+
 
 ### Página de detalhes do produto
+   - ID do produto
+   - nome
+   - categoria
+   - quantidade em estoque
+   - preço de custo
+   - preço de venda
+   - fornecedor
+   - data de entrada
+   - data de validade
+   - localização no armazém
+
 
 ### Página de Relatórios e Movimentações
  - Movimentação recente
