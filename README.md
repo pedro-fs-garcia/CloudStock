@@ -18,7 +18,6 @@ Aplicativo móvel para gestão de estoque em nuvem, com acesso remoto em tempo r
 - Visualização de Produtos: Tela para visualizar todos os produtos no estoque com opções de filtragem e busca.
 - Adicionar Produtos: Formulário para adicionar novos produtos ao estoque, incluindo detalhes como nome, categoria e fornecedor.
 - Editar Produtos: Opção para atualizar informações dos produtos existentes.
-- Excluir Produtos: Funcionalidade para remover produtos do estoque quando necessário.
 ## 3 - Controles de entrada e saída
 - Registro de Movimentações: Tela para registrar entradas e saídas de produtos, com a capacidade de adicionar detalhes sobre cada movimentação.
 ## 4 - Acompanhamento em tempo real:
