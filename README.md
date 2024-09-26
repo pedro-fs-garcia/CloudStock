@@ -43,6 +43,6 @@ Aplicativo móvel para gestão de estoque em nuvem, com acesso remoto em tempo r
 
 
 # Protótipo Figma
-[acesse o protótipo no Figma](https://www.figma.com/design/u5lrl3rKGIpdle8PNaJmy5/ClodStock?node-id=24-123&node-type=canvas&t=xM4f6KpWmKIHWnY0-0)
+[acesse o protótipo no Figma](https://www.figma.com/design/u5lrl3rKGIpdle8PNaJmy5/ClodStock?node-id=24-123&node-type=canvas&t=D2HxWEx5jj1uDTQI-0)
 
 
