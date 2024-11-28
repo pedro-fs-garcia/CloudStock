@@ -1,0 +1,123 @@
+@startuml cloudstock
+
+left to right direction
+
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+    ClassFontSize 12
+    ClassFontColor Black
+    ArrowThickness 1
+    Padding 10
+}
+
+entity Produto {
+    id_produto : PK
+    nome
+    descricao
+    preco_medio_custo
+    preco_medio_venda
+    quantidade_estoque
+    data_validade
+    localizacao_armazenamento
+    id_categoria : FK
+    id_fornecedor : FK
+}
+
+entity Categoria {
+    id_categoria : PK
+    nome
+    descricao
+}
+
+entity Fornecedor {
+    id_fornecedor : PK
+    nome
+    contato
+    email
+    telefone
+}
+
+entity Usuario {
+    id_usuario : PK
+    nome
+    email
+    senha_hash
+    nivel_acesso
+}
+
+entity Entrada_Estoque {
+    id_entrada : PK
+    quantidade
+    data_entrada
+    preco_compra
+    id_produto : FK
+    id_usuario : FK
+    id_fornecedor : FK
+}
+
+entity Saida_Estoque {
+    id_saida : PK
+    quantidade
+    data_saida
+    preco_venda
+    id_produto : FK
+    id_usuario : FK
+}
+
+entity Ordem_Compra {
+    id_ordem_compra : PK
+    quantidade
+    data_compra
+    preco_unitario
+    status
+    id_produto : FK
+    id_fornecedor : FK
+}
+
+entity Ordem_Venda {
+    id_ordem_venda : PK
+    quantidade
+    data_venda
+    preco_unitario
+    id_produto : FK
+    id_usuario : FK
+}
+
+entity Inventario {
+    id_inventario : PK
+    nome
+    descricao
+    data_criacao
+}
+
+entity Inventario_Usuario {
+    id_inventario : FK
+    id_usuario : FK
+    papel
+}
+
+entity Inventario_Produto {
+    id_inventario : FK
+    id_produto : FK
+    quantidade_disponivel
+}
+
+Produto -- Categoria : "1, n"
+Produto -- Fornecedor : "1, n"
+Entrada_Estoque -- Produto : "n, 1"
+Entrada_Estoque -- Usuario : "n, 1"
+Entrada_Estoque -- Fornecedor : "n, 1"
+Saida_Estoque -- Produto : "n, 1"
+Saida_Estoque -- Usuario : "n, 1"
+Ordem_Compra -- Produto : "n, 1"
+Ordem_Compra -- Fornecedor : "n, 1"
+Ordem_Venda -- Produto : "n, 1"
+Ordem_Venda -- Usuario : "n, 1"
+Inventario_Usuario -- Inventario : "n, 1"
+Inventario_Usuario -- Usuario : "n, 1"
+Inventario_Produto -- Inventario : "n, 1"
+Inventario_Produto -- Produto : "n, 1"
+
+@enduml

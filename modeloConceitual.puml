@@ -1,0 +1,81 @@
+@startuml cloudstock_conceptual
+
+left to right direction
+
+entity "Produto" as Produto {
+    +id_produto
+    +nome
+    +descricao
+    +preco_medio_custo
+    +preco_medio_venda
+    +quantidade_estoque
+}
+
+entity "Categoria" as Categoria {
+    +id_categoria
+    +nome
+    +descricao
+}
+
+entity "Fornecedor" as Fornecedor {
+    +id_fornecedor
+    +nome
+    +contato
+    +email
+    +telefone
+}
+
+entity "Usuário" as Usuario {
+    +id_usuario
+    +nome
+    +email
+    +senha_hash
+    +nivel_acesso
+}
+
+entity "Inventário" as Inventario {
+    +id_inventario
+    +nome
+    +descricao
+    +data_criacao
+}
+
+entity "Entrada de Estoque" as Entrada_Estoque {
+    +id_entrada
+    +quantidade
+    +data_entrada
+}
+
+entity "Saída de Estoque" as Saida_Estoque {
+    +id_saida
+    +quantidade
+    +data_saida
+}
+
+entity "Ordem de Compra" as Ordem_Compra {
+    +id_ordem_compra
+    +quantidade
+    +data_compra
+}
+
+entity "Ordem de Venda" as Ordem_Venda {
+    +id_ordem_venda
+    +quantidade
+    +data_venda
+}
+
+
+Produto -- Categoria : "1, n"
+Produto -- Fornecedor : "1, n"
+Entrada_Estoque -- Produto : "n, 1"
+Entrada_Estoque -- Usuario : "n, 1"
+Saida_Estoque -- Produto : "n, 1"
+Saida_Estoque -- Usuario : "n, 1"
+Ordem_Compra -- Produto : "n, 1"
+Ordem_Compra -- Fornecedor : "n, 1"
+Ordem_Venda -- Produto : "n, 1"
+Ordem_Venda -- Usuario : "n, 1"
+Inventario -- Produto : "n, n"
+Inventario -- Usuario : "1, n"
+
+@enduml
